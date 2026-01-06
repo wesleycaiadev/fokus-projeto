@@ -4,21 +4,29 @@ const DescansoCurtoBt = document.querySelector(".app__card-button--curto")
 const DescansoLongoBt = document.querySelector(".app__card-button--longo")
 const banner = document.querySelector(".app__image")
 const titulo = document.querySelector(".app__title")
+const botoes = document.querySelectorAll(".app__card-button")
 
 
 focobt.addEventListener("click", ()=>  {
     alterarContexto("foco")
+    focobt.ATTRIBUTE_NODE
+    focobt.classList.add("active")                                                                                                                                      
 })
 
 DescansoCurtoBt.addEventListener("click", ()=> {
      alterarContexto("descanso-curto")
+      DescansoCurtoBt.classList.add("active")  
 } )
 
 DescansoLongoBt.addEventListener("click" , ()=> {
    alterarContexto("descanso-longo")
+    DescansoLongoBt.classList.add("active") 
 })
 
 function alterarContexto(contexto) {
+  botoes.forEach(function(contexto){
+    contexto.classList.remove("active")
+  })
    html.setAttribute("data-contexto" , contexto)
    banner.setAttribute("src", `/imagens/${contexto}.png`)
 
