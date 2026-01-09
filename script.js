@@ -3,6 +3,7 @@ const focobt =  document.querySelector(".app__card-button--foco")
 const DescansoCurtoBt = document.querySelector(".app__card-button--curto")
 const DescansoLongoBt = document.querySelector(".app__card-button--longo")
 const banner = document.querySelector(".app__image")
+const bannerPausar = document.querySelector(".app__card-primary-butto-icon")
 const titulo = document.querySelector(".app__title")
 const botoes = document.querySelectorAll(".app__card-button") 
 const startPauseBt = document.querySelector("#start-pause")
@@ -93,11 +94,13 @@ function inciarOuPausar(){
     
     InvervaloId = setInterval(contagemRegressiva, 1000)
     inciarOuPausarBt.textContent = "Pausar"
+    bannerPausar.setAttribute("src" , "/imagens/pause.png")
     
 }
 
 function zerar(){
     clearInterval(InvervaloId)
     inciarOuPausarBt.textContent = "Começar"
+    bannerPausar.setAttribute("src" , "/imagens/play_arrow.png")
     InvervaloId = null 
 }
