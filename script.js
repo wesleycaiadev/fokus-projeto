@@ -9,6 +9,7 @@ const botoes = document.querySelectorAll(".app__card-button")
 const startPauseBt = document.querySelector("#start-pause")
 const inciarOuPausarBt = document.querySelector("#start-pause span")
 const musicaFoco = document.querySelector("#alternar-musica")
+const tempoNaTela = document.getElementById("timer")
 const musica = new Audio("/sons/luna-rise-part-one.mp3")
 const beep = new Audio ("/sons/beep.mp3")
 const play = new Audio ("/sons/play.wav")
@@ -78,8 +79,8 @@ const contagemRegressiva = ()=>{
         return
     }
    tempoDecorridoEmSegudos -=1;
+   mostrarTempo()
 
-   console.log ("temporizados"+ tempoDecorridoEmSegudos)
 }
 
 startPauseBt.addEventListener("click",inciarOuPausar)
@@ -104,3 +105,10 @@ function zerar(){
     bannerPausar.setAttribute("src" , "/imagens/play_arrow.png")
     InvervaloId = null 
 }
+
+function mostrarTempo(){
+    const tempo = new Date (tempoDecorridoEmSegudos * 1000)
+    const tempoFormatado = tempo.toLocaleTimeString("pt-Br", {minute:"2-digit", second:"2-digit"})
+    tempoNaTela.innerHTML = `${tempoFormatado}`
+}
+mostrarTempo()
