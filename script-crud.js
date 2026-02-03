@@ -30,7 +30,12 @@ function criarElementoTarefa(tarefa) {
     botao.classList.add('app_button-edit')
 
     botao.onclick = ()=>{
+        debugger
         const novaDescricao = prompt("Qual é a nova tarefa que você deseja?")
+         if (!novaDescricao) {
+        alert("Ops, você não digitou sua tarefa!")
+        return 
+    }
         paragrafo.textContent = novaDescricao
         tarefa.descricao = novaDescricao
         AtualizarTarefa()
