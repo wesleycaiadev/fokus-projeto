@@ -1,54 +1,29 @@
-# Focusflow - Aplicativo Pomodoro
+# 🍅 Fokus - Gerenciador de Produtividade
 
-Aplicativo web baseado na Técnica Pomodoro, desenvolvido com HTML, CSS e JavaScript (DOM). Projeto feito como prática de manipulação do DOM no JavaScript durante os estudos pela Alura.
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge)
 
-## Sobre o projeto
+## 💻 Sobre o projeto
 
-O Focusflow ajuda a organizar ciclos de foco e pausas com três modos:
+O **Fokus** é uma aplicação web desenvolvida para ajudar na gestão de tempo e produtividade utilizando a famosa **Técnica Pomodoro**. O projeto permite alternar entre períodos de foco total e descanso, além de oferecer um sistema integrado de gestão de tarefas (To-do List).
 
-- Foco: 25 minutos (1500s)
-- Descanso curto: 5 minutos (300s)
-- Descanso longo: 15 minutos (900s)
+O objetivo principal deste projeto foi aprofundar conhecimentos em manipulação do DOM, gestão de estados e armazenamento local com JavaScript.
 
-A interface muda conforme o modo selecionado e o timer faz contagem regressiva.
+## ✨ Funcionalidades
 
-## Tecnologias
+- **Temporizador Pomodoro:** Alternância fácil entre modos de "Foco", "Descanso Curto" e "Descanso Longo".
+- **Gestão de Tarefas (CRUD):** Adicionar, editar, remover e marcar tarefas como concluídas.
+- **Persistência de Dados:** As tarefas ficam salvas no `localStorage` do navegador, não se perdendo ao atualizar a página.
+- **Feedback Visual e Sonoro:** Sons de alerta ao finalizar o tempo e música ambiente opcional para foco.
+- **Eventos Personalizados:** Uso de `CustomEvents` para comunicar o fim do ciclo de foco com a lista de tarefas.
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla / ES6+)
+## 🛠 Tecnologias Utilizadas
 
-## Funcionalidades
+- **HTML5** (Estrutura semântica)
+- **CSS3** (Estilização responsiva e variáveis)
+- **JavaScript (ES6+)** (Lógica, manipulação do DOM e LocalStorage)
 
-- Alternar modos (foco/descanso curto/descanso longo)
-- Iniciar e pausar o temporizador
-- Contagem regressiva usando `setInterval` / `clearInterval`
-- Atualização do tempo na tela via manipulação do DOM
-- Alteração de tema/imagem conforme o contexto
-- Música/áudios (opcional) e feedback sonoro
+## 📂 Como executar o projeto
 
-## Como executar
-
-1. Baixe/clone este repositório
-2. Abra o arquivo `index.html` no navegador
-
-## Aprendizados (DOM)
-
-Neste projeto foram praticados conceitos como:
-
-- Seleção de elementos (`querySelector`, `querySelectorAll`, `getElementById`)
-- Escuta de eventos (`addEventListener`)
-- Manipulação de classes (`classList.add`, `classList.remove`)
-- Alteração de atributos (`setAttribute`)
-- Atualização de conteúdo (`innerHTML`, `textContent`)
-
-## Melhorias futuras (ideias)
-
-- Permitir personalizar o tempo de foco/pausas
-- Notificação do navegador ao finalizar o tempo
-- Histórico de ciclos concluídos
-- Persistência no LocalStorage
-
-## Autor
-
-Projeto desenvolvido para fins de estudo (Alura) — prática de JavaScript e DOM.
+1. Clone este repositório:
+```bash
+git clone [https://github.com/wesleycaiadev/Fokus-projeto-base.git](https://github.com/wesleycaiadev/Fokus-projeto-base.git)
