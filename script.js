@@ -85,7 +85,11 @@ const contagemRegressiva = () => {
 
     zerar();
     alert("Seu tempo acabou!");
-
+    const focoAtivo =html.getAttribute("data-contexto") == "foco"
+    if (focoAtivo) {
+      const evento = new CustomEvent("focoFinalizado")
+      document.dispatchEvent(evento)
+    }
     beep.pause();
     beep.currentTime = 0;
     return;
